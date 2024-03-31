@@ -6,9 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import model.entities.Reservation;
-
-public class BadProgram2 {
+public class BadProgram {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) throws ParseException {
@@ -29,9 +27,9 @@ public class BadProgram2 {
 		if (!checkout.after(checkin)) {
 			System.out.println("Error in reservation: check-out date must be after check-in date!");
 		} else {
-			Reservation reservation = new Reservation(roomNumber, checkin, checkout);
+//			Reservation reservation = new Reservation(roomNumber, checkin, checkout);
 
-			System.out.println(reservation);
+//			System.out.println(reservation);
 
 			System.out.println();
 			System.out.println("Enter data to update the reservation: ");
@@ -41,12 +39,12 @@ public class BadProgram2 {
 			System.out.print("Check-out date (dd/MM/yyyy): ");
 			checkout = sdf.parse(sc.next());
 
-			String error = reservation.updateDates(checkin, checkout);
-			if (error != null) {
-				System.out.println("Error in reservation: " + error);
-			} else {
-				System.out.println(reservation);
-			}
+//			String error = reservation.updateDates(checkin, checkout);
+//			if (error != null) {
+//				System.out.println("Error in reservation: " + error);
+//			} else {
+//				System.out.println(reservation);
+//			}
 
 		}
 
